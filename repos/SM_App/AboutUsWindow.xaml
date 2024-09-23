@@ -1,0 +1,57 @@
+﻿<Window x:Class="SM_APP.AboutUsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Stock Management - About Us" Height="480" Width="320">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid Background="#FFFF9C56">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MinHeight="106.48"/>
+                <RowDefinition Height="Auto" MinHeight="149"/>
+                <RowDefinition />
+                <RowDefinition Height="Auto" MinHeight="168.56"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Row="0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                 Margin="10,10,10,10" Padding="5" FontSize="14" 
+                 IsReadOnly="True" Background="#FFF1F1F1">
+                <TextBox.Text>
+                    TTF was formed in the same year that the colony of South Australia enacted legislation giving women the vote in 1894. We started off from humble beginnings making the push on style of clothes pegs.
+                We did this successfully for many decades with our products finding penetration into overseas markets. These humble beginnings soon lifted us to great heights.
+                </TextBox.Text>
+            </TextBox>
+
+
+            <Border Grid.Row="1" BorderBrush="Gray" Margin="10,0,10,0" 
+                MinHeight="100" MinWidth="100" VerticalAlignment="Center" Height="100">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFFF9C56" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Image Source="/images/logo.png"
+                   Stretch="Uniform" MaxHeight="150" MaxWidth="150">
+                </Image>
+            </Border>
+
+
+            <TextBox Grid.Row="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                 Margin="10,10,10,10" Padding="5" FontSize="14" 
+                 IsReadOnly="True" Background="#FFF1F1F1">
+                <TextBox.Text>
+                    The purpose of this application is to provide a system for maintaining and updating stock information for TTF products.
+                </TextBox.Text>
+            </TextBox>
+
+            <StackPanel Grid.Row="4" Orientation="Vertical" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Height="30" Width="60">
+                <Button Content="EXIT" Width="50" Click="MenuItem_Exit_Click" Margin="5"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>
